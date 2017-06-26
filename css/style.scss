@@ -1,0 +1,24 @@
+---
+---
+
+@import "projectContainer.scss";
+
+$headerHeight: 12vh;
+
+@include projectContainer($containerHeight: $defaultHeight - $headerHeight );
+
+body {
+    background-color: white;
+    margin: 0;
+
+    font-family: sans-serif;
+}
+
+.header {
+    height: $headerHeight;
+
+    & h1 {
+        font-size: 24px;
+    }
+}
+
