@@ -3,26 +3,19 @@
         {% include styles.html %}
     </head>
     <body>
-        
+        {% include header.html %}
+
         <div class="container">
-            <div class="project" style="background-color: green">
-                <h1>Squatbot</h1>
+        {% for page in site.pages %}
+        {% if page.layout == "projectPreview" %}
+            <div class="project" style="background-color: {{page.color}}">
+                <h1>{{page.title}}</h1>
+                <div class="projectContent">
+                    {{page.content}}
+                </div>
             </div>
-            <div class="project" style="background-color: blue">
-                <h1>Duckling</h1>
-            </div>
-            <div class="project" style="background-color: purple">
-                <h1>Ancona</h1>
-            </div>
-            <div class="project" style="background-color: orange">
-                <h1>MOLT</h1>
-            </div>
-            <div class="project" style="background-color: red">
-                <h1>Blog</h1>
-            </div>
-            <div class="project" style="background-color: orange">
-                <h1>About</h1>
-            </div>
+        {% endif %}
+        {% endfor %}
         </div>
     </body>
 </html>

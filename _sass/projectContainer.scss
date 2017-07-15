@@ -4,48 +4,60 @@ $defaultHeight: 100vh;
 @mixin projectContainer($containerWidth: $defaultWidth, $containerHeight: $defaultHeight) {
 
     .container{
-    width: $containerWidth;
-    height: $defaultHeight;
-    display: flex;
-    flex-direction: row;
-    position: relative;
+        width: $containerWidth;
+        height: $containerHeight;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .project {
+        transition: .02s;
+        cursor: pointer;
+        overflow: hidden;
+
+
+        & h1 {
+            color: white;
+            transform-origin: bottom left 0;
+            margin-left: 12px;
+        }
+
+        & .projectContent {
+            opacity: 0;
+        }
+
+        &:hover .projectContent {
+            opacity: 1;
+            transition: opacity .2s;
+        }
     }
 
     @for $i from 3 to 10 
     {
         $numProjects: $i;
-        $collapsedWidth: $containerWidth / ($i + 1);
-        $expandedWidth: 2 * $collapsedWidth;
+        $collapsedHeight: $containerHeight / ($i + 1);
+        $expandedHeight: 2 * $collapsedHeight;
 
-        .project {
-            transition: .1s;
-            cursor: pointer;
-
-            & h1 {
-                color: white;
-                transform-origin: bottom left 0;
-                margin-left: 12px;
+        /* using the first-child:nth-last-child(n) => there are n siblings trick */
+        .project:first-child:nth-last-child(#{$i}),
+        .project:first-child:nth-last-child(#{$i}) ~ .project:not(:last-child) {
+            height: $collapsedHeight;
+            
+            &:hover {
+                height: $expandedHeight;
             }
+        }
 
-            /* using the first-child:nth-last-child(n) => there are n siblings trick */
-            &:first-child:nth-last-child(#{$i}),
-            &:first-child:nth-last-child(#{$i}) ~ .project:not(:last-child) {
-                width: $collapsedWidth;
-                
-                &:hover {
-                    width: $expandedWidth;
-                }
-            }
+        /* do this separately for the last child so something is expanded always
+            doubled for selectivity */
+        .project:last-child:nth-child(#{$i}) {
+            height: $expandedHeight;
+        }
 
-            /* do this separately for the last child so something is expanded always
-                doubled for selectivity */
-            &:last-child:nth-child(#{$i}) {
-                width: $expandedWidth;
-            }
-
-            &:hover ~ .project:last-child:nth-child(#{$i}) {
-                width: $collapsedWidth;
-            }
+        .project:hover ~ .project:last-child:nth-child(#{$i}) {
+            height: $collapsedHeight;
         }
     }
 }

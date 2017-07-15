@@ -1,9 +1,9 @@
 ---
 ---
-
 @import "projectContainer.scss";
 
-$headerHeight: 12vh;
+$headerHeight: 18vh;
+$headerMinHeight: 72px;
 
 @include projectContainer($containerHeight: $defaultHeight - $headerHeight );
 
@@ -11,14 +11,45 @@ body {
     background-color: white;
     margin: 0;
 
-    font-family: sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .header {
-    height: $headerHeight;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
-    & h1 {
-        font-size: 24px;
+.nameAndIcon {
+    display: flex;
+    align-items: center;
+
+    min-height: $headerMinHeight;
+
+    & img {
+        width: 80px;
+        margin-left: 12px;
+    }
+}
+
+.projectDescription {
+    text-align: center;
+}
+
+.minorNavElements {
+    display: flex;
+    align-items: center;
+
+    & > a {
+        color: #888;
+        font-size: 18px;
+        margin: 0 12px;
+        cursor: pointer;
+
+        &:hover {
+            color: #666;
+        }
+
     }
 }
 
