@@ -2,19 +2,118 @@
 ---
 @import "projectContainer.scss";
 
-$headerHeight: 18vh;
-$headerMinHeight: 72px;
-
-@include projectContainer($containerHeight: $defaultHeight - $headerHeight );
+* {
+    margin: 0;
+}
 
 body {
     background-color: white;
+    color: #F2F2F2;
     margin: 0;
 
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+$headerHeight: 12vh;
+$headerMinHeight: 72px;
+
+$projectListHeight: 80vh;
+
+$defaultWidth: 100vw;
+$defaultHeight: 100vh;
+
+$headerTopMargin: 4px;
+$headerFontSize: 32px;
+
+
+.projectList{
+    height: $projectListHeight;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    overflow: hidden;
+
+    margin: 24px;
+
+    box-shadow: 2px 4px 8px rgba(0,0,0,.4);
+    border-radius: 16px;
+}
+
+.project {
+    transition: .02s;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0px -6px 16px rgba(0,0,0,.2);
+    padding: 4px 12px;
+}
+
+.projectHeaderRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.projectHeaderRowHeader {
+    color: white;
+    transform-origin: bottom left 0;
+    font-size: $headerFontSize;
+}
+
+h2 {
+    color: white;
+    margin-left: 12px;
+}
+
+.projectPreview {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+.project:hover .projectPreview {
+    opacity: 1;
+    transition: opacity .2s;
+    height: calc(100% - (#{$headerTopMargin} + #{$headerFontSize}));
+}
+
+@for $i from 3 to 10 
+{
+    $numProjects: $i;
+    $collapsedHeight: ($projectListHeight * .3) / ($i - 1);
+    $expandedHeight: $projectListHeight * .7;
+
+    /* using the first-child:nth-last-child(n) => there are n siblings trick */
+    .project:first-child:nth-last-child(#{$i}),
+    .project:first-child:nth-last-child(#{$i}) ~ .project:not(:last-child) {
+        height: $collapsedHeight;
+        
+        &:hover {
+            height: $expandedHeight;
+        }
+    }
+
+    /* do this separately for the last child so something is expanded always
+        doubled for selectivity */
+    .project:last-child:nth-child(#{$i}) {
+        height: $expandedHeight;
+    }
+
+    .project:hover ~ .project:last-child:nth-child(#{$i}) {
+        height: $collapsedHeight;
+    }
+}
+
 .header {
+    height: $headerHeight;
+    background-color: #35C46A;
+    color: #F2F2F2;
+    @media(max-width: 426px) {
+        height: 1vh;
+    }
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -27,21 +126,16 @@ body {
     min-height: $headerMinHeight;
 
     & img {
-        width: 80px;
-        margin-left: 12px;
+        width: .8 * $headerHeight;
     }
-}
-
-.projectDescription {
-    text-align: center;
 }
 
 .minorNavElements {
     display: flex;
     align-items: center;
+    width: 72px;
 
     & > a {
-        color: #888;
         font-size: 18px;
         margin: 0 12px;
         cursor: pointer;
@@ -53,3 +147,6 @@ body {
     }
 }
 
+.anconaImage {
+    width: 480px;
+}
