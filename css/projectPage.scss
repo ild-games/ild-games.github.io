@@ -1,19 +1,18 @@
 ---
 ---
 
+@import "utilities.scss";
+
 $marginBetweenSections: 24px;
+$columnWidth: 80vw;
 
 .projectOverview {
     background-color: #11AD4B;
     box-shadow: 4px 4px 4px rgba(0,0,0,.4);
     border-radius: 16px;
     overflow: hidden;
- 
-    width: 80vw;
 
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    @include centerColumn($columnWidth);
 
     margin-top: $marginBetweenSections;
 }
@@ -32,9 +31,9 @@ $marginBetweenSections: 24px;
 .projectFooter {
     display: flex;
     flex-direction: row;
-    justify-content: center;
 
-    margin-top: $marginBetweenSections;
+    @include centerColumn($columnWidth);
+
 }
 
 .githubLink {

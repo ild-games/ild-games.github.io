@@ -1,25 +1,18 @@
 <html>
-    <head>
-        {% include styles.html %}
-    </head>
-    <body>
-        {% include header.html %}
 
-        <div class="projectList">
-        {% for page in site.pages %}
+<head>
+    {% include styles.html %}
+</head>
+
+<body>
+    {% include header.html %}
+
+    <div class="projectList2">
+        {% for page in site.pages %} 
             {% if page.layout == "projectPreview" %}
-                <div class="project" style="background-color: {{page.color}}">
-                    <div class="projectHeaderRow">
-                        <h1 class="projectHeaderRowHeader">{{page.title}}</h1>
-                        <h1 class="projectHeaderRowHeader">{{page.description}}</h1>
-                    </div>
-                    <div class="projectPreview">
-                        {{page.content}}
-                    </div>
-                </div>
-            {% endif %}    
+            {% endif %} 
         {% endfor %}
-        </div>
-    </body>
-</html>
+    </div>
+</body>
 
+</html>
