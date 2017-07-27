@@ -16,8 +16,9 @@
             {{ page.content }}
         </div>
         {% if page.githubUrl != nil and page.githubUrl != "" %}
-            <a href="{{ page.githubUrl }}" class="githubLink fa fa-github">
-            </a>
+            <div class="githubContainer">
+                <a href="{{ page.githubUrl }}" class="githubLink fa fa-github"></a>
+            </div>
         {% endif %}
         {% if page.googlePlayUrl != nil and page.googlePlayUrl != "" %}
             <div class="downloadButtonContainer">

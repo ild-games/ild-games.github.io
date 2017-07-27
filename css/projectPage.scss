@@ -122,15 +122,20 @@
     color: #F2F2F2;
 }
 
-
+.githubContainer {
+    @include centered;
+}
 
 .githubLink {
     text-decoration: none;
-    font-size: 144px;
-    color: #2268A1;
+    font-size: 4em;
+    color: #2F2F2F;
+    &:hover:not(:active) {
+        font-size: 4.1em;
+    }
 
     &:active {
-        color: #498ABF; 
+        color: #3F3f3f; 
     }
 }
 
