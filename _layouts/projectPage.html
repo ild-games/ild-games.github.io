@@ -7,27 +7,35 @@
 
 <body>
     {% include header.html %}
-    <div class="projectOverview">
+    <div class="contents">
         <div class="projectHeader">
             {{ page.title }}
         </div>
         <img class="projectSplash" src="{{ page.splash }}"></img>
-
         <div class="projectDescription">
             {{ page.content }}
         </div>
-    </div>
-    <div class="projectFooter">
         {% if page.githubUrl != nil and page.githubUrl != "" %}
             <a href="{{ page.githubUrl }}" class="githubLink fa fa-github">
             </a>
         {% endif %}
         {% if page.googlePlayUrl != nil and page.googlePlayUrl != "" %}
-            <a href="{{ page.googlePlayUrl }}">
-                <img src="/resources/images/google-play-badge.png"></img>
-            </a>
+            <div class="downloadButtonContainer">
+                <a class="downloadButton" href="#popup">
+                    Download Now
+                </a>
+            </div>
+            <div id="popup" class="downloadPopup">
+                <div class="overlay"></div>
+                <div class="popupBody">
+                    <span>Available for early access:</span>
+                    <a href="#" class="fa fa-window-close popupExitButton"></a>
+                    <a href="{{ page.googlePlayUrl }}">
+                        <img class="playBadge" src="/resources/images/google-play-badge.png"></img>
+                    </a>
+                </div>
+            </div>
         {% endif %}
-        
     </div>
 </body>
 

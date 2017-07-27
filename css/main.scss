@@ -1,0 +1,36 @@
+---
+---
+
+@import "utilities.scss";
+
+.content {
+    height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projectTitle {
+    @include centerColumn();
+    height: 5em;
+}
+
+.projectTitleLink {    
+    font-family: 'Lobster', cursive;
+    font-size: 4em;
+
+    transition: .1s;
+    text-decoration: none;
+    &:hover {
+        font-size: 4.1em;
+
+        &:active {
+            font-size: 4em;
+        }
+    }
+}
+
+.ILDDescription {
+    display: none;
+}

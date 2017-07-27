@@ -2,16 +2,25 @@
 
 <head>
     {% include styles.html %}
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+
 </head>
 
 <body>
     {% include header.html %}
-
-    <div class="projectList2">
-        {% for page in site.pages %} 
-            {% if page.layout == "projectPreview" %}
-            {% endif %} 
-        {% endfor %}
+    <div class="content">
+        <div class="projectList2">
+            {% for page in site.pages %} 
+                {% if page.layout == "projectPage" %}
+                    <div class="projectTitle">
+                        <a class="projectTitleLink" href="{{ page.url }}">{{ page.title }}</a>
+                    </div>
+                {% endif %} 
+            {% endfor %}
+        </div>
+        <div class="ILDDescription">
+            Sup sup sup, we're ILD Games
+        </div>
     </div>
 </body>
 
