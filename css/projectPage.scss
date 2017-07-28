@@ -60,7 +60,7 @@
 
 .popupBody {
     $width: 240px;
-    $height: 100px;
+    $height: 300px;
     
     height: $height;
     width: $width;
@@ -74,6 +74,13 @@
 
     background-color: #F2F2F2;
     box-shadow: 2px 2px 4px rgba(0,0,0,.2);
+
+    
+}
+
+.badges {
+    display: flex;    
+    flex-direction: column;   
 }
 
 .popupExitButton {
