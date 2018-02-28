@@ -1,0 +1,71 @@
+#centerAnchor
+{
+    max-width:1280px;
+    min-width: 500px;
+    margin:auto;
+}
+
+a:link
+{
+    color:#552154;
+}
+
+a:visited
+{
+    color:#552154;
+}
+
+body
+{
+    color:#552154;
+    font-size: 16pt;
+}
+
+#columnLayoutContainer
+{
+    margin-top:0px;
+}
+
+#leftColumn
+{
+    min-width: 100px;
+    width:33%;
+    float:left;
+}
+
+#rightColumn
+{
+    width:66%;
+    float:left;
+}
+
+h1
+{
+    font-size: 26pt;
+    font-weight:normal;
+    margin-top:5px;
+    margin-bottom:0px;
+}
+
+h2
+{
+    font-size: 20pt;
+    font-weight: normal;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+h3
+{
+    font-size: 16pt;
+    font-weight: bold;
+    margin-top:15px;
+    margin-bottom:0px;
+}
+
+
+.contentSection
+{
+    margin-bottom:30px;
+    width:100%;
+}
