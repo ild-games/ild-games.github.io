@@ -8,22 +8,25 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel=icon href="images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <div id="headerContainer">
-        <img id="headerImage" src="images/header.png" width="100%" height="*" />
+        <div id="headerImageContainer">
+            <img id="headerImage" src="images/header.png" />
+        </div>
     </div>
 
-    <div id="centerAnchor">
-        <!--
-                Left column for factsheet
-        -->
-        <div id="columnLayoutContainer">
-            <div id="leftColumn">
+    <div id="contents">
+        <!-- Left column for factsheet -->
+        <div id="factsheetFlexContainer">
+            <div class="mobileSectionHeader">Factsheet</div>
+            <div id="factsheetContents">
                 <div class="factLabel">Developer</div>
                 ILD Games
-                <br/> Based in Madison, WI
+                <br/>
+                Based in Madison, WI
 
                 <div class="factLabel">Website</div>
                 <a href="http://www.ild-games.com">ild-games.com</a>
@@ -45,11 +48,11 @@
                 <a href="mailto:play.ild.games@gmail.com?Subject=Squatbot%20Testflight%20Request">Squatbot on iOS Testflight</a>
                 <br/>
             </div>
+        </div>
 
-            <!--
-                    Right column for descriptions
-                -->
-            <div id="rightColumn">
+        <!-- Right column for descriptions -->
+        <div id="coreInfoFlexContainer">
+            <div id="coreInfoContainer">
                 <div class="sectionHeader">
                 Description
                 </div>
@@ -66,27 +69,29 @@
                     <li>Challenging, hand-crafted levels</li>
                     <li>Endless mode, with a focus is on executing just one more perfect jump</li>
                 </ul>
-
+                <!--
                 <div class="sectionHeader">Videos</div>
                 (TRAILER GOES HERE WHEN FINISHED)
+                -->
 
                 <div class="sectionHeader">Images</div>
+                <div class="lowerPriorityText">(Click for full size)</div>
+                <a href="screenshots/squatbot-screenshot-1.png">
+                    <img class="demoImage" src="screenshots/squatbot-screenshot-1-preview.png" />
+                </a>
+                <a href="screenshots/squatbot-screenshot-2.png">
+                    <img class="demoImage" src="screenshots/squatbot-screenshot-2-preview.png" />
+                </a>
+                <a href="screenshots/squatbot-screenshot-3.png">
+                    <img class="demoImage" src="screenshots/squatbot-screenshot-3-preview.png" />
+                </a>
+                <a href="screenshots/squatbot-screenshot-4.png">
+                    <img class="demoImage" src="screenshots/squatbot-screenshot-4-preview.png" />
+                </a>
+                <br/>
                 <div>
                     <a href="squatbot-screenshots.zip">Download all full size screenshots</a>
                 </div>
-                <a href="screenshots/squatbot-screenshot-1.png">
-                    <img class="demoImage" src="screenshots/squatbot-screenshot-1-preview.png" max-width=100% height=* />
-                </a>
-                <a href="screenshots/squatbot-screenshot-2.png">
-                    <img class="demoImage" src="screenshots/squatbot-screenshot-2-preview.png" max-width=100% height=* />
-                </a>
-                <a href="screenshots/squatbot-screenshot-3.png">
-                    <img class="demoImage" src="screenshots/squatbot-screenshot-3-preview.png" max-width=100% height=* />
-                </a>
-                <a href="screenshots/squatbot-screenshot-4.png">
-                    <img class="demoImage" src="screenshots/squatbot-screenshot-4-preview.png" max-width=100% height=* />
-                </a>
-                <br> (Click for full size)
 
                 <div class="sectionHeader">History</div>
                 What was originally conceived of as a weekend-long game jam became a long term passion project, and ultimately led to the
@@ -125,6 +130,8 @@
                 <a href="squatbot-logos/squatbot-app-icon-large.png">
                     <img src="squatbot-logos/squatbot-app-icon-thumbnail.png" />
                 </a>
+
+                <p id="copyright" class="lowerPriorityText">&copy; ILD Games 2016-2018</div>
             </div>
         </div>
     </div>
