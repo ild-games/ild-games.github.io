@@ -1,32 +1,66 @@
+body
+{
+    color: #1a1a1a;
+    font-size: 12pt;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
 #centerAnchor
 {
     max-width:1280px;
     min-width: 500px;
+    padding: 0 7px 0 7px;
     margin:auto;
+}
+
+#headerContainer
+{
+    width: 100%;
+    background: #3e216c; /* Old browsers */
+    background: -moz-linear-gradient(top, #3e216c 0%, #582051 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #3e216c 0%,#582051 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #3e216c 0%,#582051 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e216c', endColorstr='#582051',GradientType=0 ); /* IE6-9 */
+    margin-bottom: 12px;
+}
+
+#headerImage
+{
+    display: block;
+    margin: 0 auto 0;
+    padding: 10px 0 10px;
+    max-width: 360px;;
 }
 
 a:link
 {
-    color:#1a1a1;
+    color: #e37222;
+    text-decoration: none;
 }
 
 a:visited
 {
-    color:#1a1a1;
+    color: #e37222;
 }
 
-body
+a:hover
 {
-    color:#1a1a1;
-    font-size: 12pt;
-    padding:0;
-    margin:0;
-    font-family: 'Lato', sans-serif;
+    color: #e37222;
+    text-decoration: underline;
 }
 
 #columnLayoutContainer
 {
     margin-top:0px;
+}
+
+ul
+{
+    margin: 0 0 0 15px;
+    padding: 0 0 0 15px;
 }
 
 #leftColumn
@@ -42,42 +76,30 @@ body
     float:left;
 }
 
-h1
+.factLabel
 {
-    font-size: 16pt;
-    font-weight:normal;
-    margin-top:3px;
-    margin-bottom:0px;
+    font-weight: 700;
 }
 
-h2
+.factLabel:not(:first-child)
 {
-    font-size: 14pt;
-    font-weight: normal;
-    margin-top:3px;
-    margin-bottom:3px;
+    margin-top: 9px;
 }
 
-h3
+.sectionHeader
 {
-    font-size: 12pt;
-    font-weight: bold;
-    margin-top:15px;
-    margin-bottom:0px;
+    font-weight: 700;
+    font-family: 'Merriweather', serif;
+    font-size: 19pt;
+    margin-bottom: 8px;
 }
 
-h3:first-of-type 
+.sectionHeader:not(:first-child)
 {
-    margin-top:0px;
+    margin-top: 24px;
 }
 
-img
+.demoImage 
 {
-    margin:1px;
-}
-
-.contentSection
-{
-    margin-bottom:10px;
-    width:100%;
+    padding: 2px 2px 2px 2px;
 }
