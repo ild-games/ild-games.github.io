@@ -1,0 +1,102 @@
+body
+{
+    font-size: 24pt;
+    padding: 0;
+    margin: 0;
+    font-family: 'Boogaloo', cursive;
+    color:white;
+    font-weight:normal;
+    
+    background: #1d113a; /* Old browsers */
+    background: -moz-linear-gradient(top, #1d113a 0%, #3a101d 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #1d113a 0%,#3a101d 100%); /* Chrome10-25,Safari5.1-6 */
+    background: url("images/background-stars.png"), linear-gradient(to bottom, #1d113a 0%,#3a101d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d113a', endColorstr='#3a101d',GradientType=0 ); /* IE6-9 */
+    background-attachment:fixed;
+}
+
+
+#headerContainer
+{
+    width: 100%;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#headerImageContainer
+{
+    margin: 0 auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#headerImage
+{
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+}
+
+#content
+{
+    text-align:center;
+    width:100%;
+    max-width:1140px;
+    margin:0 auto;
+    padding-left:5%;
+    padding-right:5%;
+    box-sizing:border-box;
+}
+
+#footer
+{
+    margin-top:50px;
+    margin-bottom:10px;
+    font-size:10pt;
+    text-align:center;
+}
+
+h1
+{
+    font-size:48pt;
+    margin-bottom:5px;
+    margin-top:5px;
+    font-weight:normal;
+}
+
+img
+{
+    padding-top: 5px;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 0px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+a:link
+{
+    color: #e37222;
+    text-decoration: none;
+}
+
+a:visited
+{
+    color: #e37222;
+}
+
+a:hover
+{
+    color: #e37222;
+    text-decoration: underline;
+}
