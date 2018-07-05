@@ -15,7 +15,6 @@ body
     background-attachment:fixed;
 }
 
-
 #headerContainer
 {
     width: 100%;
@@ -68,6 +67,11 @@ h1
 img
 {
     padding-top: 5px;
+}
+
+.socialMedia
+{
+    padding-left:15px;
 }
 
 .videoWrapper {
