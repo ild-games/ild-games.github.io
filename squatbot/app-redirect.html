@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link rel=icon href="images/favicon.png">
+        <link rel="stylesheet" href="style.css">
+        <title>Squatbot</title>
+        <script type="text/javascript">
+            //iPhone
+            if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+                window.location = "https://itunes.apple.com/us/app/squatbot/id1342396571";
+            }
+            //Android
+            else if(navigator.userAgent.match(/android/i)) {
+                window.location = "https://play.google.com/store/apps/details?id=com.ildgames.squatbot";
+            }
+            //Catch-all redirect to the Squatbot website
+            else {
+                window.location = "http://ild-games.com/squatbot/";
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1>Redirecting you to the Squatbot app store listing for your device.  If you are not automatically redirected, please click one of the following links.<br /></h1>
+            <br />
+            <a href="https://itunes.apple.com/us/app/squatbot/id1342396571"><img src="images/app-store-badge.png"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.ildgames.squatbot"><img src="images/google-play-badge.png"></a>
+            <br />
+            <h1><a href = "http://www.ild-games.com/squatbot/">Or click here for the Squatbot website.</a><br /></h1>
+        </center>
+    </body>
+</html>
