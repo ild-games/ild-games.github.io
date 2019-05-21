@@ -55,6 +55,7 @@ body
 #factsheetContents
 {
     min-width: 185px;
+    max-width:300px;
 }
 
 #coreInfoFlexContainer
@@ -110,12 +111,17 @@ body
 @media only screen and (max-width: 762px)
 {
     #contents 
-    {
+        {
         flex-direction: column;
+    }
+    
+    #factsheetContents
+        {
+        max-width:none;
     }
 
     .sectionHeader
-    {
+        {
         margin-top: 24px;
     }
 }
